@@ -1,0 +1,9 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="student31.sap.training.helloworld.controller.Main" displayBlock="true">
+    <Shell id="_IDGenShell">
+ <App id="_IDGenApp">
+ <pages>
+ <mvc:XMLView id="_IDGenXMLView" viewName="student31.sap.training.helloworld.view.Overview"/>
+ </pages>
+ </App>
+</Shell>
+</mvc:View>

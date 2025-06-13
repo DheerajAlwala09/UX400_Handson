@@ -1,0 +1,44 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:f="sap.ui.layout.form"
+xmlns:core="sap.ui.core" controllerName="student31.sap.training.helloworld.controller.Overview">
+<Page id="_IDGenPage1" title="Flight Customers">
+ <content>
+ <Panel id="_IDGenPanel" headerText="New Customer" expandable="true" expanded="true" class="sapUiResponsiveMargin sapUiHideOnPhone" width="auto">
+ <content>
+ <f:SimpleForm id="_IDGenSimpleForm" layout="ColumnLayout" editable="true">
+ <f:toolbar>
+ <Toolbar id="_IDGenToolbar">
+ <content>
+ <ToolbarSpacer id="_IDGenToolbarSpacer"/>
+ <Button id="_IDGenButton1" icon="sap-icon://create" text="Create Customer" press=".onSave"/>
+ </content>
+ </Toolbar>
+ </f:toolbar>
+<f:content>
+ <core:Title id="_IDGenTitle" text="General Data"/>
+ <Label id="_IDGenLabel" text="Form"/>
+ <Input id="_IDGenInput" value="{customer>/Form}"/>
+ <Label id="_IDGenLabel1" text="Customer Name"/>
+ <Input id="_IDGenInput1" value="{customer>/CustomerName}"/>
+ <Label id="_IDGenLabel2" text="Discount"/>
+ <Input id="_IDGenInput2"  value="{customer>/Discount}"/>
+ <core:Title id="_IDGenTitle1" text="Address Data"/>
+ <Label id="_IDGenLabel3" text="Street"/>
+ <Input id="_IDGenInput3" value="{customer>/Street}"/>
+ <Label id="_IDGenLabel4" text="Post Code"/>
+ <Input id="_IDGenInput4" value="{customer>/PostCode}"/>
+ <Label id="_IDGenLabel5" text="City"/>
+ <Input id="_IDGenInput5" value="{customer>/City}" />
+ <Label id="_IDGenLabel6" text="Country"/>
+ <Input id="_IDGenInput6" value="{customer>/Country}" /> 
+ <core:Title id="_IDGenTitle2" text="Contact Data"/>
+ <Label id="_IDGenLabel7" text="Email"/> 
+ <Input id="_IDGenInput7"  value="{customer>/Email}" />
+ <Label id="_IDGenLabel8" text="Telephone"/>
+ <Input id="_IDGenInput8" value="{customer>/Telephone}"/> 
+ </f:content>
+ </f:SimpleForm>
+ </content>
+ </Panel>
+ </content>
+</Page>
+</mvc:View>
