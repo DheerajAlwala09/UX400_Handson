@@ -39,6 +39,57 @@ xmlns:core="sap.ui.core" controllerName="student31.sap.training.helloworld.contr
  </f:SimpleForm>
  </content>
  </Panel>
+ <Table id="customerTable" headerText="Customers" growing="true" growingThreshold="5"
+ mode="SingleSelectLeft" selectionChange=".onCustomerChange"
+ class="sapUiResponsiveMargin" width="auto" items="{/Customers}">
+ <columns>
+ <Column id="_IDGenColumn"><header><Text id="_IDGenText1" text="Customer Name"/></header></Column>
+ <Column id="_IDGenColumn1"><header><Text id="_IDGenText2" text="Street"/></header></Column>
+ <Column id="_IDGenColumn2"><header><Text id="_IDGenText3" text="Post Code"/></header></Column>
+ <Column id="_IDGenColumn3"><header><Text id="_IDGenText4" text="City"/></header></Column>
+ <Column id="_IDGenColumn4"><header><Text id="_IDGenText5" text="Country"/></header></Column>
+ <Column id="_IDGenColumn5"><header><Text id="_IDGenText6" text="Email"/></header></Column>
+ </columns>
+ <items>
+ <ColumnListItem id="_IDGenColumnListItem">
+ <cells>
+ <ObjectIdentifier id="_IDGenObjectIdentifier" title="{CustomerName}"/>
+ <Text id="_IDGenText7" text="{Street}"/>
+ <Text id="_IDGenText8" text="{PostCode}"/>
+ <Text id="_IDGenText9" text="{City}"/>
+ <Text id="_IDGenText10" text="{Country}"/>
+ <Text id="_IDGenText11" text="{Email}"/>
+ </cells>
+ </ColumnListItem>
+ </items>
+</Table>
+
+<Table id="bookingTable" headerText="Bookings" items="{_Bookings}"
+ growing="true" growingThreshold="5" 
+class="sapUiResponsiveMargin" width="auto" visible="false">
+ <columns>
+ <Column id="_IDGenColumn7"><header><Text id="_IDGenText12" text="Airline ID"/></header></Column>
+ <Column id="_IDGenColumn8"><header><Text id="_IDGenText13" text="Connection Number"/></header></Column>
+ <Column id="_IDGenColumn9"><header><Text id="_IDGenText14" text="Flight Date"/></header></Column>
+ <Column id="_IDGenColumn10"><header><Text id="_IDGenText15" text="Class"/></header></Column>
+ <Column id="_IDGenColumn11"><header><Text id="_IDGenText16" text="Foreign Currency Payment"/></header></Column>
+ <Column id="_IDGenColumn12"><header><Text id="_IDGenText17" text="Cancellation Status"/></header></Column>
+ </columns>
+ <items>
+ <ColumnListItem id="_IDGenColumnListItem1">
+ <cells>
+ <ObjectIdentifier id="_IDGenObjectIdentifier1" title="{AirlineID}"/>
+ <ObjectIdentifier id="_IDGenObjectIdentifier2" title="{ConnectionNumber}"/> 
+ <ObjectIdentifier id="_IDGenObjectIdentifier3" title="{FlightDate}"/>
+ <Text id="_IDGenText18" text="{Class}"/>
+ <ObjectNumber id="_IDGenObjectNumber" number="{ForeignCurrencyPayment}"
+ unit="{ForeignCurrency}"/>
+ <Text id="_IDGenText19" text="{IsCancelled}"/>
+ </cells>
+ </ColumnListItem>
+ </items>
+</Table>
+
  </content>
 </Page>
 </mvc:View>
