@@ -2,7 +2,7 @@
 xmlns:core="sap.ui.core" controllerName="student31.sap.training.helloworld.controller.Overview">
 <Page id="_IDGenPage1" title="Flight Customers">
  <content>
- <Panel id="_IDGenPanel" headerText="New Customer" expandable="true" expanded="true" class="sapUiResponsiveMargin sapUiHideOnPhone" width="auto">
+ <Panel id="_IDGenPanel" headerText="Create New Customer" expandable="true" expanded="true" class="sapUiResponsiveMargin sapUiHideOnPhone" width="auto">
  <content>
  <f:SimpleForm id="_IDGenSimpleForm" layout="ColumnLayout" editable="true">
  <f:toolbar>
