@@ -20,7 +20,7 @@ xmlns:core="sap.ui.core" controllerName="student31.sap.training.helloworld.contr
  <Label id="_IDGenLabel1" text="Customer Name"/>
  <Input id="_IDGenInput1" value="{customer>/CustomerName}"/>
  <Label id="_IDGenLabel2" text="Discount"/>
- <Input id="_IDGenInput2"  value="{customer>/Discount}"/>
+ <Input id="_IDGenInput2"  value="{path: 'customer>/Discount', type:'sap.ui.model.type.Integer', constraints:{minimum:0,maximum:100} }"/>
  <core:Title id="_IDGenTitle1" text="Address Data"/>
  <Label id="_IDGenLabel3" text="Street"/>
  <Input id="_IDGenInput3" value="{customer>/Street}"/>
@@ -80,9 +80,9 @@ class="sapUiResponsiveMargin" width="auto" visible="false">
  <cells>
  <ObjectIdentifier id="_IDGenObjectIdentifier1" title="{AirlineID}"/>
  <ObjectIdentifier id="_IDGenObjectIdentifier2" title="{ConnectionNumber}"/> 
- <ObjectIdentifier id="_IDGenObjectIdentifier3" title="{FlightDate}"/>
+ <ObjectIdentifier id="_IDGenObjectIdentifier3" title="{path:'FlightDate', type:'sap.ui.model.type.Date', formatOptions:{ source:{pattern:'yyyy-MM-dd'}, style:'medium' }}"/>
  <Text id="_IDGenText18" text="{Class}"/>
- <ObjectNumber id="_IDGenObjectNumber" number="{ForeignCurrencyPayment}"
+ <ObjectNumber id="_IDGenObjectNumber" number="{parts:[{path:'ForeignCurrencyPayment'},{path:'ForeignCurrency'}], type:'sap.ui.model.type.Currency', formatOptions:{showMeasure:false}}"
  unit="{ForeignCurrency}"/>
  <Text id="_IDGenText19" text="{IsCancelled}"/>
  </cells>
