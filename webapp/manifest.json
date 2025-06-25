@@ -50,7 +50,9 @@
       "i18n": {
         "type": "sap.ui.model.resource.ResourceModel",
         "settings": {
-          "bundleName": "student31.sap.training.helloworld.i18n.i18n"
+          "bundleName": "student31.sap.training.helloworld.i18n.i18n",
+          "supportedLocales": [""],
+          "fallbackLocale": ""
         }
       },
       "": {

@@ -1,8 +1,10 @@
 sap.ui.define([
     "sap/ui/core/mvc/Controller",
     "sap/ui/core/syncStyleClass",
-    "sap/ui/model/json/JSONModel"
-], (Controller,syncStyleClass,JSONModel) => {
+    "sap/ui/model/json/JSONModel",
+    "sap/ui/model/Filter",
+    "sap/ui/model/FilterOperator"
+], (Controller,syncStyleClass,JSONModel,Filter,FilterOperator) => {
     "use strict";
 
     return Controller.extend("student31.sap.training.helloworld.controller.Overview", {
@@ -30,6 +32,16 @@ sap.ui.define([
             var oBinding = oEvt.getParameter("listItem").getBindingContext();
             this.getView().byId("bookingTable").setVisible(true);
             this.getView().byId("bookingTable").setBindingContext(oBinding)
+        },
+        onFilterCustomers: function(oEvent){
+            var aFilter = [];
+            var squery = oEvent.getParameter("query");
+            if(squery && squery.length >0){
+                var oFilter = new Filter("CustomerName",FilterOperator.Contains,squery);
+                aFilter.push(oFilter);
+            }
+            var custBinding = this.byId("customerTable").getBinding("items");
+            custBinding.filter(aFilter);
         }
     });
 });
